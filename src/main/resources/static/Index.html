@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框</title>
+
+</head>
+<body>
+ID: <input type="text" id="id"/>
+姓名: <input type="text" id="name"/>
+年龄: <input type="text" id="age"/>
+<input type="button" onclick="insert()" value="增加"/>
+<input type="button" onclick=" delete1()" value="删除"/>
+<input type="button" onclick="update()" value="修改"/>
+
+<input type="button" onclick="select1()" value="查看"/>
+
+</body>
+<script type="text/javascript">
+    function insert() {
+        var nameElement = document.getElementById("name");
+        var name = nameElement.value;
+        console.log(name);
+        var ageElement = document.getElementById("age");
+        var age = ageElement.value;
+        console.log(age);
+        window.open("insert?name=" + name + "&age=" + age);
+    }
+    function delete1(){
+        var idElement = document.getElementById("id");
+        var id = idElement.value;
+        window.open("delete1?id=" + id);
+    }
+    function update() {
+        var idElement = document.getElementById("id");
+        var id = idElement.value;
+        var nameElement = document.getElementById("name");
+        var name = nameElement.value;
+        console.log(name);
+        var ageElement = document.getElementById("age");
+        var age = ageElement.value;
+        window.open("update?id=" + id + "&name=" + name + "&age=" + age);
+    }
+    function select1() {
+        var nameElement = document.getElementById("name");
+        var name = nameElement.value;
+        console.log(name);
+        var ageElement = document.getElementById("age");
+        var age = ageElement.value;
+        window.open("select?name=" + name + "&age=" + age);
+    }
+</script>
+</html>
